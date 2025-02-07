@@ -1,4 +1,5 @@
 #include "SerEngineCore\Application.h"
+#include "SerEngineCore\Log.h"
 
 #include <GLFW\glfw3.h>
 
@@ -8,7 +9,10 @@ namespace SerEngine
 {
 	Application::Application()
 	{
-
+		LOG_INFO("Welcome to spdlog");
+		LOG_ERROR("Some error message");
+		LOG_WARN("Easy padding in numbers");
+		LOG_CRITICAL("Support for int");
 	}
 
 	Application::~Application()
