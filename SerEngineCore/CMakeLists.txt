@@ -4,9 +4,17 @@ cmake_minimum_required(VERSION 3.12)
 # Наименование проекта
 set(ENGINE_PROJECT_NAME SerEngineCore)
 
+set(ENGINE_PUBLIC_INCLUDES
+    includes/SerEngineCore/Application.h
+)
+
+set(ENGINE_PRIVATE_INCLUDES
+    src/SerEngineCore/Application.cpp
+)
+
 add_library(${ENGINE_PROJECT_NAME} STATIC
-    src/SerEngineCore/Utils/test.cpp
-    includes/SerEngineCore/Utils/test.hpp
+    ${ENGINE_PUBLIC_INCLUDES}
+    ${ENGINE_PRIVATE_INCLUDES}
 )
 
 target_include_directories(${ENGINE_PROJECT_NAME} PUBLIC includes)
